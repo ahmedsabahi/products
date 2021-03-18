@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of productList">
+      <div class="card mb-4 shadow-sm">
+        <a href="" [routerLink]="['item', item.id]">
+          <img class="img-fluid" src="{{ item.image }}" alt="" />
+        </a>
+        <div class="card-body" *ngIf="item">
+          <h5 class="card-text text-danger">
+            {{ item.title }}
+          </h5>
+          <p class="card-text">
+            <span class="font-weight-bold">Category: </span>{{ item.category }}
+          </p>
+          <p class="card-text">
+            <span class="font-weight-bold">Price: </span>{{ item.price }} $
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button
+              type="button"
+              (click)="addToCart(item)"
+              class="btn btn-sm btn-outline-secondary"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

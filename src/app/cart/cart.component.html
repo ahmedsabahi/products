@@ -1,0 +1,33 @@
+<div class="card m-3" *ngFor="let item of items">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img class="img-thumbnail" [src]="item.image" alt="..." />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <span class="delete-icon">
+          <i
+            class="fas fa-trash-alt d-flex justify-content-end"
+            (click)="deleteItem(item)"
+          ></i
+        ></span>
+        <h5 class="card-title">
+          {{ item.title }}
+        </h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <span class="font-weight-bold">Category:</span>
+            {{ item.category }}
+          </li>
+          <li class="list-group-item">
+            <span class="font-weight-bold">Description:</span>
+            {{ item.description }}
+          </li>
+          <li class="list-group-item">
+            <span class="font-weight-bold">Price: </span> {{ item.price }} $
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

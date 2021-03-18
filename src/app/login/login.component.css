@@ -1,0 +1,9 @@
+.form-group > i {
+  top: 45px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.form-group > i:hover {
+  color: red;
+}

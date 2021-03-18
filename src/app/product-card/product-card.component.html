@@ -1,0 +1,28 @@
+<div class="container pt-5">
+  <div class="card">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img class="img-thumbnail" [src]="product.image" alt="..." />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.title }}</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <span class="font-weight-bold">Category:</span>
+              {{ product.category }}
+            </li>
+            <li class="list-group-item">
+              <span class="font-weight-bold">Description:</span>
+              {{ product.description }}
+            </li>
+            <li class="list-group-item">
+              <span class="font-weight-bold">Price: </span>
+              {{ product.price }} $
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
